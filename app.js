@@ -1,4 +1,4 @@
-\
+
 const KEY='ma-lectio-v17';
 const defaultGospel={
   date:new Date().toISOString().slice(0,10),
@@ -54,7 +54,7 @@ function nav(){
 }
 function home(){
  return `<section class="center">
-  <div class="iconbox"><img src="assets/logo_mark.svg"></div>
+  <div class="iconbox"><img src="logo_mark.svg"></div>
   <h1>Un temps pour demeurer avec Dieu.</h1>
   <p class="quote">« Parle, Seigneur, ton serviteur écoute. »</p>
   <div class="card">
@@ -108,7 +108,7 @@ function resolution(){
  <button class="primary" data-action="finish">TERMINER MA LECTIO</button>`;
 }
 function done(){
- return `<section class="center"><div class="iconbox"><img src="assets/logo_mark.svg"></div>
+ return `<section class="center"><div class="iconbox"><img src="logo_mark.svg"></div>
  <h1>Ta Lectio est terminée.</h1><p class="quote">Garde maintenant un peu de silence et laisse la Parole t’accompagner dans ta journée.</p>
  <p class="quote">« Demeurez en moi, comme moi en vous. »</p>
  <button class="primary" data-go="journal">OUVRIR MON CARNET</button><br><br><button class="link" data-go="home">REVENIR À L’ACCUEIL</button></section>`;
