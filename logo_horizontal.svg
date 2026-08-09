@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220">
+  <rect width="760" height="220" rx="38" fill="#FAF7EF"/>
+  <g transform="translate(30 20)">
+    <path d="M48 50c34-18 60-16 80 6v112c-20-22-46-24-80-6z" fill="#E8F0EA" stroke="#164B35" stroke-width="7"/>
+    <path d="M208 50c-34-18-60-16-80 6v112c20-22 46-24 80-6z" fill="#E8F0EA" stroke="#164B35" stroke-width="7"/>
+    <path d="M128 33v87M106 55h44" stroke="#B07A28" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="285" y="100" font-family="Georgia,serif" font-size="48" font-weight="600" fill="#164B35">Ma Lectio Divina</text>
+  <text x="288" y="142" font-family="Georgia,serif" font-size="23" font-style="italic" fill="#B07A28">Demeurer avec le Christ</text>
+</svg>
