@@ -19,6 +19,7 @@ async function loadGospel(){
       state.gospel.text=gospel.contenu || '';
       save();
       render();
+    }
 
     
   }catch(error){
