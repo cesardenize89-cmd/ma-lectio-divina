@@ -1,4 +1,25 @@
+async function loadGospel(){
+  try{
+    const date=new Date().toISOString().slice(0,10);
+    const response=await fetch(`https://api.aelf.org/v1/messes/${date}/romain`);
+    if(!response.ok) return;
 
+    const data=await response.json();
+    const lectures=data.informations?.messes?.[0]?.lectures||[];
+    const gospel=lectures.find(x=>x.type==='evangile');
+
+    if(gospel?.ref){
+      state.gospel.date=date;
+      state.gospel.reference=gospel.ref;
+      state.gospel.title=gospel.titre||'Évangile du jour';
+      state.gospel.text='';
+      save();
+      render();
+    }
+  }catch(error){
+    console.log('AELF indisponible',error);
+  }
+}
 const KEY='ma-lectio-v17';
 const defaultGospel={
   date:new Date().toISOString().slice(0,10),
@@ -159,3 +180,4 @@ document.addEventListener('change',e=>{
  if(e.target.id==='hour'){const [h,m]=e.target.value.split(':').map(Number);state.settings.hour=h;state.settings.minute=m;save()}
 });
 render();
+loadGospel();
