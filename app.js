@@ -24,6 +24,9 @@ async function loadGospel(){
   console.log('AELF indisponible',error);
 }
 }
+  console.log('AELF indisponible',error);
+}
+}
     
   }catch(error){
     console.log('AELF indisponible',error);
