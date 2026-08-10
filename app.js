@@ -1,12 +1,12 @@
 async function loadGospel(){
-  try{
- const date=new Date().toISOString().slice(0,10);
-const response=await fetch(`https://api.aelf.org/v1/messes/${date}/france`);
-if(!response.ok) return;
+   try{
+    const date=new Date().toISOString().slice(0,10);
+    const response=await fetch(`https://api.aelf.org/v1/messes/${date}/france`);
+    if(!response.ok) return;
 
-const data=await response.json();
-const lectures=data.informations?.messes?.[0]?.lectures||[];
-const gospel=lectures.find(x=>x.type==='evangile');
+    const data=await response.json();
+    const lectures=data.informations?.messes?.[0]?.lectures||[];
+    const gospel=lectures.find(x=>x.type==='evangile');
 
     if(gospel?.ref){
       state.gospel.date=date;
@@ -18,9 +18,9 @@ const gospel=lectures.find(x=>x.type==='evangile');
     }
   }catch(error){
     console.log('AELF indisponible',error);
-  }
+  } 
 }
-const KEY='ma-lectio-v17';
+const KEY='ma-lectio-v18';
 const defaultGospel={
   date:new Date().toISOString().slice(0,10),
   title:"Évangile du jour",
