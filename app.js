@@ -12,7 +12,7 @@ async function loadGospel(){
       state.gospel.date=date;
       state.gospel.reference=gospel.ref;
       state.gospel.title=gospel.titre||'Évangile du jour';
-      state.gospel.text='';
+      state.gospel.text=gospel.contenu||'';
       save();
       render();
     }
