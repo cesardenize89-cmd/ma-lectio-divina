@@ -4,8 +4,11 @@ erro
   try{
     const date=new Date().toISOString().slice(0,10);
     const response=await fetch(`https://api.aelf.org/v1/messes/${date}/france`);
+const data=await response.json();
 
-    if(!response.ok) throw new Error('API AELF indisponible');
+const lectures=data.messes?.[0]?.lectures || [];
+const gospel=lectures.find(x=>x.type==='evangile');
+    
 
     const data=await response.json();
 
