@@ -18,14 +18,7 @@ async function loadGospel(){
       state.gospel.title=gospel.titre || 'Évangile du jour';
       state.gospel.text=gospel.contenu || '';
 
-      save();
-      render();
-    }
-  }catch(error){
-    console.log('AELF indisponible',error);
-  }
-}
-    }
+    
   }catch(error){
     console.log('AELF indisponible',error);
   }
