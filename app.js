@@ -12,15 +12,18 @@ async function loadGospel(){
     const lectures=data.lectures || [];
     const gospel=lectures.find(x=>x.type==='evangile');
 
-    if(gospel){
-      state.gospel.date=date;
-      state.gospel.reference=gospel.ref || 'Évangile du jour';
-      state.gospel.title=gospel.titre || 'Évangile du jour';
-      state.gospel.text=gospel.contenu || '';
-      save();
-      render();
-    }
-
+  if(gospel){
+  state.gospel.date=date;
+  state.gospel.reference=gospel.ref || 'Évangile du jour';
+  state.gospel.title=gospel.titre || 'Évangile du jour';
+  state.gospel.text=gospel.contenu || '';
+  save();
+  render();
+}
+}catch(error){
+  console.log('AELF indisponible',error);
+}
+}
     
   }catch(error){
     console.log('AELF indisponible',error);
