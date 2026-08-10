@@ -24,10 +24,7 @@ async function loadGospel(){
   }
 }
 
-      save();
-      render();
-    }
-  }catch(error){
+    
     console.log('AELF indisponible',error);
   }
 }
