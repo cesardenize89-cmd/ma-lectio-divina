@@ -1,12 +1,12 @@
 async function loadGospel(){
   try{
-       const date=new Date().toISOString().slice(0,10);
-    const response=await fetch(`https://api.aelf.org/v1/lectures/${date}/france`);
-    if(!response.ok) return;
+ const date=new Date().toISOString().slice(0,10);
+const response=await fetch(`https://api.aelf.org/v1/messes/${date}/france`);
+if(!response.ok) return;
 
-    const data=await response.json();
-    const lectures=data.informations?.lectures||data.lectures||[];
-    const gospel=lectures.find(x=>x.type==='evangile');
+const data=await response.json();
+const lectures=data.informations?.messes?.[0]?.lectures||[];
+const gospel=lectures.find(x=>x.type==='evangile');
 
     if(gospel?.ref){
       state.gospel.date=date;
