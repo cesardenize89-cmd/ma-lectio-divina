@@ -5,7 +5,7 @@ async function loadGospel(){
     if(!response.ok) return;
 
     const data=await response.json();
-    const lectures=data.lectures||[];
+    const lectures=data.informations?.lectures||data.lectures||[];
     const gospel=lectures.find(x=>x.type==='evangile');
 
     if(gospel?.ref){
