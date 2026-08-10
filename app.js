@@ -17,6 +17,8 @@ async function loadGospel(){
       state.gospel.reference=gospel.ref || 'Évangile du jour';
       state.gospel.title=gospel.titre || 'Évangile du jour';
       state.gospel.text=gospel.contenu || '';
+      save();
+      render();
 
     
   }catch(error){
