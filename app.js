@@ -1,7 +1,7 @@
 async function loadGospel(){
   try{
     const date=new Date().toISOString().slice(0,10);
-    const response=await fetch(`https://api.aelf.org/v1/messes/${date}/romain`);
+    const response=await fetch(`https://api.aelf.org/v1/messes/${date}/france`)
     if(!response.ok) return;
 
     const data=await response.json();
