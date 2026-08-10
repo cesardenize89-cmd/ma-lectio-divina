@@ -25,9 +25,7 @@ async function loadGospel(){
 }
 
     
-    console.log('AELF indisponible',error);
-  }
-}
+    
 const KEY='ma-lectio-v18';
 const defaultGospel={
   date:new Date().toISOString().slice(0,10),
