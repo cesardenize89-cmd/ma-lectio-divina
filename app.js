@@ -6,7 +6,7 @@ async function loadGospel(){
     if(!response.ok) throw new Error('API AELF indisponible');
 
     const data=await response.json();
-    const lectures=data.lectures || [];
+    const lectures=data.informations?.messes?.[0]?.lectures || [];
     const gospel=lectures.find(x=>x.type==='evangile');
 
     if(gospel){
